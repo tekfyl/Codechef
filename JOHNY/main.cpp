@@ -15,8 +15,8 @@ int main(){
             cin >> k;
             johny = v[k-1];
             sort(v.begin(), v.end());
-            int d = distance(v.begin(), find(v.begin(), v.end(), johny));
-            cout << d+1 << endl;
+            int d = distance(v.begin(), find(v.begin(), v.end(), johny)) + 1;
+            cout << d << endl;
         }
     return 0;
 }
