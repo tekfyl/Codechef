@@ -7,6 +7,7 @@ int main(){
         int i,n,t;
         cin >> t;
         for(i=0; i<t; i++){
+
             long long int k,l,total=0;
             cin >> n >> k;
             vector<int> f(k+1,0);
