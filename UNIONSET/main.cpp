@@ -7,8 +7,8 @@ int main(){
         int i,n,t;
         cin >> t;
         for(i=0; i<t; i++){
-
-            long long int k,l,total=0;
+            long long int k;
+            int l,total=0;
             cin >> n >> k;
             vector<int> f(k+1,0);
             vector< vector<int> > v(n, vector<int>(0,0));

@@ -27,8 +27,8 @@ int main(){
                     int x = A[a];
                     if(x>y) continue;
                     for(c=0; c<r; c++){
-                        int z = C[c];
                         if(z>y) continue;
+                        int z = C[c];
                         sum += (x+y)*(y+z);
                     }
                 }
