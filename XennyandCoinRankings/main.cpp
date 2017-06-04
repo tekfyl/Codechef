@@ -7,15 +7,10 @@ int main(){
         int i,n;
         cin >> n;
         while(n--){
-            int x,y,rank=0;
+            long long int x,y;
+            long long int rank=0;
             cin >> x >> y;
-            rank = (x+1)*(x+2)/2 + ((y)*(y+1)/2 + 1) + max(x,y)-1;
-            if(x == 0 || y == 0) {
-                rank -= max(x,y);
-            }
-            else if (x == y){    
-            rank = (x+1)*(x+2)/2 + ((y)*(y+1)/2 + 1) + x+y-1;
-            }
+            rank = (x+1)*(x+2)/2 + ((y)*(y+1)/2 + x*y);
             cout << rank << endl;
         }
     return 0;
