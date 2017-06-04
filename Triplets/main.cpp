@@ -5,6 +5,7 @@ using namespace std;
 int main(){
     std::ios_base::sync_with_stdio(false);
         int i,t,p,q,r,a,b,c;
+
         long long int sum=0;
         cin >> t;
         while(t--){
