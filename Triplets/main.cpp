@@ -32,7 +32,7 @@ int main(){
                     }
                 }
             }
-            cout << sum << endl;
+            cout << sum%1000000007 << endl;
         }
     return 0;
 }
