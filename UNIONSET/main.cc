@@ -24,8 +24,8 @@ int main(){
                 }
             }
             int z,x;
-            for(z=0; z<n; z++){
-                for(x=z+1; x<n; x++){
+            for(z=0; z<v.size(); z++){
+                for(x=z+1; x<v.size(); x++){
                     for(auto c:v[z]) f[c]++;
                     for(auto c:v[x]) f[c]++;
                     count(f.begin(), f.end(), 0) == 1? total++ : 1;
