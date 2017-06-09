@@ -27,7 +27,7 @@ int main(){
                 cin >> in; Z.pb(in);
             }
             sort(all(X)); sort(all(Z));
-            sort(all(Y), greater<int>);
+            sort(all(Y), greater<int>());
             for(auto c:Y) cout << c << " ";
         }
 
