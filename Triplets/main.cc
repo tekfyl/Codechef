@@ -1,40 +1,36 @@
 #include <bits/stdc++.h>
 
+#define all(c) c.begin(), c.end()
+#define LL long long
+#define pb push_back
+#define vi vector<int>
+#define vll vector<LL>
+#define rep(i,n)    for(__typeof(n) i = 0; i < n; i++)
+#define rep1(i,n)   for(__typeof(n) i = 1; i <= n; i++)
+
 using namespace std;
 
 int main(){
     std::ios_base::sync_with_stdio(false);
-    int i,t,p,q,r,a,b,c;
-    
-    long long int sum=0;
-    cin >> t;
-    while(t--){
-        sum = 0;
-        cin >> p >> q >> r;
-        vector<int> A,B,C;
-        for(i=0; i<p; i++){
-            cin >> a; A.push_back(a);
-        }
-        for(i=0; i<q; i++){
-            cin >> b; B.push_back(b);
-        }
-        for(i=0; i<r; i++){
-            cin >> c; C.push_back(c);
-        }
-        for(b=0; b<q; b++){
-            int y = B[b];
-            for(a=0; a<p; a++){
-                int x = A[a];
-                if(x>y) continue;
-                for(c=0; c<r; c++){
-                    int z = C[c];
-                    if(z>y) continue;
-                    sum += (x+y)*(y+z);
-                    sum = sum%1000000007;
-                }
+        int i,t;
+        cin >> t;
+        rep(i,t){
+            int p,q,r,in; cin >> p >> q >> r;
+            vi X,Y,Z;
+            rep(j,p){
+                 cin >> in; X.pb(in);
             }
+            rep(j,q){
+                cin >> in; Y.pb(in);
+            }
+            rep(j,r){
+                cin >> in; Z.pb(in);
+            }
+            sort(all(X)); sort(all(Z));
+            sort(all(Y), greater<int>);
+            for(auto c:Y) cout << c << " ";
         }
-        cout << sum << endl;
-    }
+
     return 0;
 }
+
